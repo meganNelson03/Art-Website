@@ -13,13 +13,24 @@ h1 {
 	margin-top: 4rem;
 	margin-bottom: 3rem;
 	font-weight: 300;
+	margin-right: 0;
 }
 
-img {
-	margin-left: 2rem;
-	margin-right: 2rem;
-	max-width: 80%;
-	height: auto;
+.holder {
+	color: white;
+}
+
+.holder img {
+	max-width: 100%;
+	display: inline-block;
+	object-fit: contain;
+	padding-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.pieceText {
+	float: right;
 }
 
 .navbar {
@@ -37,4 +48,9 @@ img {
 .nav-link {
 	font-size: 1.2rem;
 	font-weight: 300;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0);
+    transition: background 500ms;
 }

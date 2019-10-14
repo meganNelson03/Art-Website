@@ -20,6 +20,8 @@ var Piece = require("./models/pieces.js");
 seedDB();
 
 
+
+// ROUTES
 app.get("/", (req, res) => {
 	res.render("index");
 });

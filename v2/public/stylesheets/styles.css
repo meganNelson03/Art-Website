@@ -1,0 +1,67 @@
+img {
+	height: 40rem;
+}
+
+body {
+    background: #1b1c1f;
+    font-family: "Be Vietnam", san-serif;
+    font-weight: 300;
+}
+
+h1 {
+	color: white;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+	font-weight: 300;
+	margin-right: 0;
+}
+
+.hr {
+	background: white;
+}
+
+.holder {
+	color: white;	
+	padding-top: 6rem;
+}
+
+.holder img {
+	max-width: 100%;
+	object-fit: contain;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	margin-bottom: 0;
+}
+
+img {
+	max-height: 700px;
+}
+
+
+.pieceText {
+	text-align: justify;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.navbar {
+	background: #1b1c1f;
+}
+
+.top-nav li {
+	position: right;
+}
+
+.navbar-brand {
+	font-weight: 300;
+}
+
+.nav-link {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0);
+    transition: background 500ms;
+}

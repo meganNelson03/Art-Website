@@ -1,0 +1,42 @@
+<% include ./partials/header.ejs %>
+
+<div class="jumbotron" style="background: gray">
+  <h1 class="display-4">Pieces</h1>
+  <p class="lead">Test</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-lg" href="/pieces" role="button">Black and White</a>
+    <a class="btn btn-lg" href="/pieces" role="button">Colored Pencil</a>
+  </p>
+</div>
+
+
+<div class="grid container-fluid px-0">
+	<div class="row align-items-center holder">
+		<div class="col-xl-7">
+			<img class="img-fluid" src="../imgs/the_beach.png">
+		</div>
+		<div class="col-xl-5 pieceText">
+			<h2 class=""> <%= pieces[0].name %> </h2>
+			<hr>
+			<%= pieces[0].description %>
+		</div>
+		</div>
+	</div>
+	<div class="row align-items-center holder">
+		<div class="col-xl-5 pieceText">
+			<h2 class=""> <%= pieces[0].name %> </h2>
+			<hr>
+			<%= pieces[0].description %>
+		</div>
+		<div class="col-xl-7">
+			<img class="img-fluid" src="../imgs/flower.jpeg">
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
+<% include ./partials/footer.ejs %>

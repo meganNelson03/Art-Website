@@ -4,11 +4,26 @@
 	<h1>pieces</h1>	
 </div>
 
+<% var floatR = false; %>
+<% function floatWhat() { %>
+<%	if (floatR) {	%>
+<%		floatR = false; %>
+<%		return "right"; %>	
+<%	} else { 		%>
+<%		floatR = true; %>
+<%		return "left";   %>
+<%	}; 	%>
+<% } %>
 
 
 <% pieces.forEach((piece) => { %>
-	<div class="col-md-9 col-sm-12 order-1 order-md-2">
-		<img src="<%= piece.image %>">
+	<% var dir = floatWhat(); %>
+	<div class="col-md-9 col-sm-12 holder" style="float: <%= dir %>;">
+		<img src="<%= piece.image %>"> 
+		<div id="pieceText" class="col-md-3">
+			<h3> <%= piece.name %> </h3>
+			<%= piece.description %>
+		</div>
 	</div>
 <% }); %>
 
