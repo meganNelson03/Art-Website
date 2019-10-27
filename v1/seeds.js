@@ -31,7 +31,7 @@ var pieces = [
 	{
 		name: "Tents",
 		image: "./imgs/camping.jpg",
-		description: "marker"
+		description: "marker",
 		tag: "m"
 	}
 ];

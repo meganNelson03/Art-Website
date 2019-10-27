@@ -1,16 +1,78 @@
 <% include ./partials/header.ejs %>
 
-<div class="jumbotron" style="background: gray">
+
+<!-- <div class="jumbotron" style="background: gray">
   <h1 class="display-4">Pieces</h1>
   <p class="lead">Test</p>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p>test two</p>
   <p class="lead">
-    <a class="btn btn-lg" href="/pieces" role="button">Black and White</a>
-    <a class="btn btn-lg" href="/pieces" role="button">Colored Pencil</a>
+    <a class="btn btn-lg" id="bw" href="#" role="button">Black and White</a>
+    <a class="btn btn-lg" id="cp" href="/pieces" role="button">Colored Pencil</a>
   </p>
+</div> */ -->
+
+<!-- <div class="row text-center container-fluid" style="display:flex; flex-wrap:wrap">
+    <% pieces.forEach(function(piece){ %>
+        <div class="col-md-6 col-sm-12">
+            <div class="thumbnail">
+                  <div class="container">
+                  <a href="/">
+                    <img class="img-fluid" style="object-fit: contain;" src="<%= piece.image%>">
+                  </a>
+                    <div class="text_block">
+                      <h4><%= piece.name %></h4>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+        </div>
+    <% });%>
+</div> -->
+
+<div class="row text-center container-fluid" style="display:flex; flex-wrap:wrap">
+    <% pieces.forEach(function(piece){ %>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="thumbnail">
+                  <div class="container">
+
+                  <a href="/">
+                    <img class="img-fluid" style="object-fit: contain;" src="<%= piece.image%>">
+                  </a>
+                    <div class="text_block">
+                      <h4><%= piece.name %></h4>
+                    </div>
+                  </div>
+                  <br>
+            </div>
+        </div>
+
+    <% });%>
 </div>
 
+
+
+
+
+<script>
+  var images = document.getElementsByClassName("img-fluid");
+  var textBox = document.getElementsByClassName("text_block");
+
+ 
+  for (let i=0; i<images.length; i++) {
+    images[i].addEventListener("mouseover", (event) => {
+      event.target.style.opacity = 0.3;
+      textBox[i].style.display = "block";
+    });
+    images[i].addEventListener("mouseout", (event) => {
+      event.target.style.opacity = 1;
+      textBox[i].style.display = "none";
+    });
+
+  }
+
+</script>
 
 
 

@@ -32,6 +32,8 @@ app.get("/pieces", (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
+			console.log("server \n");
+			console.log(pieces);
 			res.render("pieces", {pieces: pieces});
 		}
 

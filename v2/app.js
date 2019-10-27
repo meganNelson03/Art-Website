@@ -4,12 +4,13 @@ var bodyparser = require("body-parser");
 var seedDB = require("./seeds.js");
 var fs = require("fs");
 
+
 var app = express(); 
 
 
 // CONFIGURATION
 app.use(express.static(__dirname + "/public"));
-mongoose.connect("mongodb://localhost:27017/art_site_v1");
+mongoose.connect("mongodb://localhost:27018/art_site_v2");
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
@@ -32,6 +33,7 @@ app.get("/pieces", (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
+		
 			res.render("pieces", {pieces: pieces});
 		}
 

@@ -1,0 +1,140 @@
+img {
+	height: 40rem;
+}
+
+body {
+    background: #1b1c1f;
+    font-family: "Be Vietnam", san-serif;
+    font-weight: 300;
+}
+
+h1 {
+	color: white;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+	font-weight: 300;
+	margin-right: 0;
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+
+}
+
+.showImageRow {
+	max-width: 1200px;
+	max-heigt: 200px;
+	margin-left: 4rem;
+	margin-right: 4rem;
+
+}
+
+#showImage {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+
+.grid-item {
+	overflow: none;
+	float: left;
+	padding-right: 2rem;
+	padding-top: 2rem;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: auto;
+}
+
+
+.thumbnail {
+	padding: 0; 
+	display: inline-block;
+	
+}
+
+.thumnail caption-full {
+	padding: 0px;
+
+
+}
+
+.row {
+	padding-top: 4rem;
+}
+
+.hr {
+	background: white;
+}
+
+.holder {
+	color: white;	
+	padding-top: 6rem;
+}
+
+.holder img {
+	max-width: 100%;
+	object-fit: contain;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	margin-bottom: 0;
+}
+
+
+img {
+	max-height: 700px;
+	-webkit-box-shadow: 2px 3px 4px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 3px 4px -1px rgba(0,0,0,0.75);
+	box-shadow: 2px 3px 4px -1px rgba(0,0,0,0.75);
+}
+
+ /*Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text_block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1b1c1f;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: none;
+}
+
+
+
+.pieceText {
+	text-align: justify;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.navbar {
+	background: #1b1c1f;
+}
+
+.top-nav li {
+	position: right;
+}
+
+.navbar-brand {
+	font-weight: 300;
+}
+
+.nav-link {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0);
+    transition: background 1000ms;
+}

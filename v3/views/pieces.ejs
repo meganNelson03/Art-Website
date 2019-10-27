@@ -1,0 +1,72 @@
+<% include ./partials/header.ejs %>
+
+
+<div style="margin-left: 4rem; margin-top: 2rem; padding-right: 0rem">
+<div class="grid" style="margin: auto;">
+  <% pieces.forEach((piece) => { %>
+    <div class="thumnail grid-item grid-item--width1">
+      <a href="/pieces/<%= piece._id %>"><img class="image" src="<%= piece.image %>" style="max-width: 400px; height: auto; object-fit: contain;"></a>
+      <div class="text_block">
+        <h4><%= piece.name %></h4>
+      </div>
+    </div>
+  <% }); %>
+</div>
+</div>
+
+
+
+<script>
+  
+  var textBox = document.getElementsByClassName("text_block");
+  var elem = document.querySelector(".grid");
+  var images;
+
+
+
+  function callBack() {
+    var masonry = new Masonry(elem, {
+      itemSelector: ".grid-item",
+      columnWidth: 50
+    });
+  }
+
+
+
+  function setUpMasonry(callBack) {
+    images = document.getElementsByClassName("image");
+
+
+    for (let i=0; i<images.length; i++) {
+    images[i].addEventListener("mouseover", (event) => {
+      event.target.style.opacity = 0.6;
+      textBox[i].style.display = "block";
+    });
+    images[i].addEventListener("mouseout", (event) => {
+      event.target.style.opacity = 1;
+      textBox[i].style.display = "none";
+    });
+
+    
+
+  }
+
+  callBack();
+
+  }
+
+
+
+
+  setUpMasonry(callBack);
+    
+
+
+ 
+  
+
+</script>
+
+
+
+<% include ./partials/footer.ejs %>
