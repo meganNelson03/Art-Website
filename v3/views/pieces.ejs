@@ -34,8 +34,6 @@
 
   }
 
-
-
   var $grid = $(".grid").imagesLoaded(function() {
     console.log("Image loaded");
     $grid.masonry({
@@ -46,47 +44,6 @@
 
   });
 
-
-
-
-  // async function loadImages(imagesArr, callBack) {
-  //   const promiseArr = [];
-
-  //   for (let i=0; i<imagesArr.length; i++) {        
-
-  //     promiseArr.push(new Promise(async (resolve, reject) => {
-
-      
-  //       await imagesArr[i].onload; 
-  //       resolve(imagesArr[i]);
-  //       imagesArr[i].onerror = reject("failure " + imagesArr[i].tag);
-
-
-  //     }));
-
-  //   }
-
-  //   await Promise.all(promiseArr).then((values) => {
-  //     console.log(values);
-  //   }).catch((err) => {
-  //     console.log(err);
-  //   });
-   
-  //   callBack();
-
-  // }
-
-
-  // function callBack() {
-  //   console.log("hey");
-  //   var masonry = new Masonry(elem, {
-  //     itemSelector: ".grid-item",
-  //     resize: true,
-  //     columnWidth: 50
-  //   });
-  // }
-
-  // loadImages(images, callBack);
     
 </script>
 

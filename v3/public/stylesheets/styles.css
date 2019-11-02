@@ -16,6 +16,15 @@ h1 {
 	margin-right: 0;
 }
 
+p, h2 {
+	color: white;
+	text-align: justify;
+}
+
+hr {
+	background-color: white;
+}
+
 .container {
 	padding: 0;
 	margin: 0;
@@ -61,9 +70,6 @@ h1 {
 
 }
 
-.row {
-	padding-top: 4rem;
-}
 
 .hr {
 	background: white;
@@ -101,10 +107,13 @@ img {
   bottom: 20px;
   right: 20px;
   background-color: #1b1c1f;
+  opacity: 0.8;
+  border-radius: 15px 0px 0px 15px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 10px;
+  font-weight: 300;
   display: none;
 }
 
@@ -116,6 +125,7 @@ img {
 	padding-right: 3rem;
 }
 
+/* NAVBAR STYLING */
 .navbar {
 	background: #1b1c1f;
 }
