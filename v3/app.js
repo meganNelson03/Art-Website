@@ -33,7 +33,6 @@ app.get("/pieces", (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
-		
 			res.render("pieces", {pieces: pieces});
 		}
 

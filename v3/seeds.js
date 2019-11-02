@@ -2,8 +2,6 @@ var mongoose = require("mongoose");
 var Piece = require("./models/pieces.js");
 var gm = require("gm"); //for finding image size
 
-var wide, tall, normal; 
-
 var pieces = [
 	{
 		name: "The Beach",
@@ -73,28 +71,64 @@ var pieces = [
 		tag: "m"
 	},
 	{
-		name: "amanda.jpg",
+		name: "amanda",
 		image: "/imgs/amanda.jpg",
 		description: "colored pencil",
 		tag: "cp"
 	},
 	{
-		name: "Chair",
-		image: "/imgs/chair.jpg",
-		description: "marker",
+		name: "myself",
+		image: "/imgs/myself.jpg",
+		description: "oil painting",
+		tag: "p"
+	},
+	{
+		name: "sugarhouse coffee",
+		image: "/imgs/sugarhouse.jpg",
+		description: "watercolor",
+		tag: "p"
+	},
+	{
+		name: "outdoors",
+		image: "/imgs/outdoors.jpg",
+		description: "colored pencil",
+		tag: "p"
+	}, 
+	{
+		name: "outdoors",
+		image: "/imgs/coffee.png",
+		description: "coffee painting",
 		tag: "cp"
 	},
 	{
-		name: "Outdoors",
-		image: "/imgs/outdoors.jpg",
+		name: "little statue",
+		image: "/imgs/littlestatue.jpg",
 		description: "coffee painting",
-		tag: "p"
-	}, 
+		tag: "cp"
+	},
 	{
 		name: "inside",
 		image: "/imgs/coffee.jpg",
 		description: "coffee paining",
 		tag: "p"
+	},
+	{
+		name: "cagefan.jpg",
+		image: "/imgs/cagefan.jpg",
+		description: "black and white",
+		tag: "bw"
+	},
+	{
+		name: "indoors",
+		image: "/imgs/indoors.jpg",
+		description: "black and white",
+		tag: "bw"
+	},
+	{
+		name: "purple girl",
+		image: "/imgs/purple.jpeg",
+		description: "digital",
+		tag: "d"
 	},
 	{
 		name: "nscon logo",
@@ -110,7 +144,6 @@ var pieces = [
 	}
 
 ];
-
 
 
 function seedDB() {
@@ -153,60 +186,5 @@ function seedDB() {
 
 	});
 }
-
-
-
-
-
-
-		// for (let i=0; i<pieces.length; i++) {
-
-		// 	console.log("curr piece " + pieces[i].name);
-
-		// 	gm('./public/' + pieces[i].image).size((err, size) => {
-		// 		if (err) throw err;
-		// 		var h = size.height;
-		// 		var w = size.width;
-
-		// 		pieces[i].height = h;
-		// 		pieces[i].width = w;
-
-			
-		// 	}, () => {
-		// 		Piece.create(pieces[i], (err, art) => {
-		// 			if (err) throw err;
-		// 			console.log(`added piece: ${art.name}, ${art.width}`);
-
-		// 		});
-		// 	});	
-				
-		// }
-
-
-		// pieces.forEach(async (piece) => {
-
-		// 	await gm("./public/" + piece.image).size(async (err, size) => {
-		// 			if (err) throw err;
-		// 			var h = await size.height;
-		// 			var w = await size.width;
-
-		// 			piece.height = h;
-		// 			piece.width = w;	
-
-		// 			Piece.create(piece, (err, art) => {
-
-		// 				if (err) throw err;
-		// 				console.log("added piece");
-		// 				console.log(art.name + "," + art.width);
-
-		// 			});
-				
-		// 	});
-			
-		// });
-
-
-
-	
 
 module.exports = seedDB;

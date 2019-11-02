@@ -1,5 +1,5 @@
 img {
-	height: 40rem;
+	/*height: 40rem;*/
 }
 
 body {
@@ -22,19 +22,17 @@ h1 {
 
 }
 
-.showImageRow {
-	max-width: 1200px;
-	max-heigt: 200px;
-	margin-left: 4rem;
-	margin-right: 4rem;
-
+.showHolder {
+	/*margin-left: 2rem;
+	margin-right: 2rem;*/
 }
 
+
 #showImage {
-	display: block;
+/*	display: block;
 	width: 100%;
 	height: auto;
-	object-fit: contain;
+	object-fit: contain;*/
 }
 
 
@@ -106,6 +104,7 @@ img {
   color: white;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 10px;
   display: none;
 }
 

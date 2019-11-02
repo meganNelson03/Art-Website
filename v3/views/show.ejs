@@ -3,12 +3,13 @@
 
 
 
-<div class="showImageRow row">
-	<div class="col-md-6 col-sm-6">
-		<img id="showImage" src="<%= piece.image %>">
+<div class="container-fluid row" style="margin-left: 4rem; margin-left: 4rem;">
+	<div class="col-md-6 col-sm-6 col-xs-6" style="max-width: 800px">
+		<img class="img-fluid" style="" src="<%= piece.image %>">
 	</div>
-	<div class="col-md-6 col-sm-6 col-xs-6">
+	<div class="col-md-6 col-sm-6 col-xs-6 d-lg-inline">
 		<h2 style="color: white;"><%= piece.name %></h2>
+		<h3 style="color: white;"><%= piece.description %></h3>
 	</div>
 </div>
 
