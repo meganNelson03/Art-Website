@@ -6,11 +6,11 @@ var fs = require("fs");
 
 
 var app = express(); 
-
+const portNum = process.env.PORT || 3001;
 
 // CONFIGURATION
 app.use(express.static(__dirname + "/public"));
-mongoose.connect("mongodb://localhost:27018/art_site_v2");
+mongoose.connect("mongodb://localhost:27018/art_site_v3", {useNewUrlParser: "true", useUnifiedTopology: "true"});
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
@@ -24,7 +24,11 @@ seedDB();
 
 // ROUTES
 app.get("/", (req, res) => {
-	res.render("index");
+	
+	Piece.find({}, (err, piece) => {
+		res.render("index", {piece: piece});
+	});
+	
 });
 
 app.get("/pieces", (req, res) => {
@@ -54,6 +58,6 @@ app.get("/pieces/:id", (req, res) => {
 });
 
 
-app.listen(3001, () => {
-	console.log("Listening at Port 3001...");
+app.listen(portNum, () => {
+	console.log(`Listening at Port ${portNum}...`);
 });

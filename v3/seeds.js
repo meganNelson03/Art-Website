@@ -13,7 +13,7 @@ var pieces = [
 	{
 		name: "Flower",
 		image: "/imgs/flower.jpeg",
-		descrption: "pen and ink",
+		description: "pen and ink",
 		tag: "bw"
 	},
 	{
@@ -137,6 +137,12 @@ var pieces = [
 		tag: "bw"
 	},
 	{
+		name: "stuff",
+		image: "/imgs/stuff.jpg",
+		description: "marker",
+		tag: "m"
+	},
+	{
 		name: "crossword puzzle",
 		image: "/imgs/crossword.jpg",
 		description: "pen",
@@ -153,12 +159,12 @@ function seedDB() {
 		if (err) throw err;
 		console.log("deleted pieces");
 		var promises = new Array(pieces.length);
-		var h, w;
+		var h, w, isItWide;
 
 		for (let i=0; i<pieces.length; i++) {
 
 			promises[i] = new Promise((resolve, reject) => {
-				gm('./public/' + pieces[i].image).size((err, size) => {
+				gm('./public/' + pieces[i].image).size(async (err, size) => {
 					if (err) reject(err);	
 
 					h = size.height;
@@ -167,19 +173,19 @@ function seedDB() {
 					pieces[i].height = h;
 					pieces[i].width = w;
 
+
 					resolve(size);
 				});
 			});
 			promises.push(promises[i]);
 		}
 
-		Promise.all(promises).then(async (values) => {
+		Promise.all(promises).then((values) => {
 
-
-			pieces.forEach((piece) => {
+			pieces.forEach((piece) => {	
 
 				Piece.create(piece, (err, art) => {
-					console.log("Created piece: " + art.name);
+					console.log("Created piece: " + art);
 				});
 			});	
 		});
